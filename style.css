@@ -164,7 +164,7 @@ p.banner {
 /*Articles*/
 
 .article-container {
-    background-color: #f3f5f5;
+    background-color: #f5f4f5;
     display: flex;
     align-items: center;
 }
@@ -254,8 +254,137 @@ p.banner {
 
 /*Start learning*/
 
+.learning-container {
+    background-color: #f5f4f5;
+    border-top: 1px solid #dbdbdb;
+    padding: 32px 16px 24px 16px;
+}
+.learning-title {
+    font-size: 32px;
+    padding-bottom: 24px;
+    text-align: center;
+}
+.cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.learning-card {
+    background-color: #d8d8d8;
+    margin: 8px 0;
+    padding: 16px 16px 24px 16px;
+}
+.learning-content-title {
+    font-size: 18px;
+}
+.learning-img, 
+.learning-content-info {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .learning-container {
+        background-color: #eaebec;
+        padding: 32px 40px 0px 40px;
+    }
+    .learning-title {
+        padding-bottom: 0;
+    }
+    .cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 32px;
+    }
+    .learning-card a {
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 0;
+    }
+    .learning-img {
+        display: flex;
+    }
+    .learning-content-info {
+        display: block;
+        font-size: 18px;
+    }
+}
 
 /*Thesis exhibit*/
 
+.thesis-container {
+    background-color: #f5f4f5;
+    border-top: 1px solid #dbdbdb;
+    padding: 32px 16px 24px 16px;
+    width: 100%;
+}
+.thesis-title {
+    font-size: 32px;
+    padding-bottom: 24px;
+    text-align: center;
+}
+.thesis-main a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+}
+.thesis-main-content, 
+.thesis-small {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .thesis-container {
+        background-color: #f3f5f5;
+    }
+    .thesis-cards {
+        display: flex;
+    }
+
+    .thesis-main-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .thesis-small {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .thesis-card-img {
+        width: 35%;
+    }
+    .thesis-card-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+}
 
 /*Footer*/
+
+footer {
+    display: flex;
+    padding: 16px;
+}
+
+footer h6 {
+    font-weight: normal;
+}
+
+.footer-right {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    footer {
+        border-top: #dbdbdb;
+        padding: 16px 24px;
+    }
+    .footer-right {
+        display: flex;
+        justify-content: flex-end;
+        width: auto;
+    }
+}
