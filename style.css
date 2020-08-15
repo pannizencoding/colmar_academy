@@ -2,7 +2,11 @@
 .u-pad-24 {
     padding: 0 24px;
 }
+.u-pad-16 {
+    padding: 0 16px;
+}
 
+/*Basic settings*/
 
 * {
     border: 0;
@@ -10,7 +14,7 @@
     margin: 0;
     padding: 0;
     color: #4a4a4a;
-    font-family: Roboto, sans-serif;
+    font-family: Arial, sans-serif;
     width: 100%;
 }
 
@@ -18,9 +22,11 @@
 header {
     background-color: #f8f8f8;
     position: fixed;
+    display: flex;
     align-items: center;
     height: 64px;
     width: 100%;
+    z-index: 2;
 }
 
 ul {
@@ -75,32 +81,110 @@ a {
     .icon-text {
         display: flex;
         font-size: 16px;
+        font-weight: 500;
     }
     #logo {
         height: 32px;
     }
     #logo-text {
-        text-transform: uppercase;
         color: #4a4a4a;
+        font-weight: 700;
     }
     #academy-light {
         color: #9b9b9b;
+        font-weight: 400;
     }
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+
 /*Banner*/
-#banner-img {
+
+.banner-container {
+    background-color: #dbdbdb;
+    display: flex;
+    flex-direction: column;
     position: relative;
-    margin-top: 64px;
+    top: 64px;
+}
+
+.banner-content {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 16px;
+}
+
+#banner-img {
     width: 100%;
 }
 
-h2 {
+h1.banner {
+    font-size: 32px;
+    font-weight: 700;
+    padding-bottom: 32px;
+}
+
+p.banner {
+    font-size: 24px;
+    font-weight: 600;
     padding-bottom: 24px;
+}
+
+.button {
+    background-color: #9b9b9b;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    justify-content: center;
+    padding: 8px;
+}
+
+@media only screen and (min-width: 768px) {
+    .banner-container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 32px 24px;
+        width: 100%;
+    }
+    #banner-img {
+        width: 60%;
+    }
+    .button {
+        background-color: #4a4a4a;
+    }
 }
 
 /*Articles*/
 
+.article-container {
+    padding-top: 16px;
+    padding-bottom: 32px;
+}
+
+.article-main-desktop {
+    display: none;
+}
+.article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media only screen and (min-width: 768px) {
+    .article-mobile {
+        display: none;
+    }
+
+    .article-main-desktop {
+        display: flex;
+        flex-direction: row;
+    }
+}
 
 /*Start learning*/
 
